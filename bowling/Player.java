@@ -7,11 +7,16 @@ public class Player {
     this.lastName = lastName;
   };
 
-  public void bowl () {
-    System.out.println("Bowling for Soup!");
+  public int bowl () {
+    Turn turn = this.takeTurn();
+    return turn.score();
   };
 
   public String fullName () {
     return this.firstName + " " + this.lastName;
-  }
-}
+  };
+
+  Turn takeTurn () {
+    return new Turn();
+  };
+};

@@ -4,5 +4,6 @@ class Main {
     Game game = new Game(players);
     System.out.println(game);
     game.displayPlayers();
+    game.start();
   }
 }

@@ -10,6 +10,13 @@ public class Game {
     }
   }
 
+  public void start () {
+    for(Player player : this.players) {
+      String output = player.fullName() + " bowled a " + player.bowl();
+      System.out.println(output);
+    }
+  }
+
   public void displayPlayers () {
     for(Player player : this.players) {
       System.out.println(player.fullName());
