@@ -11,13 +11,18 @@ public class Game {
   }
 
   public void start () {
-    for(Player player : this.players) {
-      String output = player.fullName() + " bowled a " + player.bowl();
-      System.out.println(output);
+    for(int i = 1; i < 10; i++) {
+      int round = i;
+      System.out.println("Round " + round);
+      for(Player player : this.players) {
+        String output = player.fullName() + " turn score total is " + player.bowl();
+        System.out.println(output);
+      }
     }
   }
 
   public void displayPlayers () {
+    System.out.println("Players\n");
     for(Player player : this.players) {
       System.out.println(player.fullName());
     }
